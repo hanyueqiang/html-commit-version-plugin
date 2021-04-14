@@ -1,0 +1,29 @@
+{
+  "name": "html-commit-version-plugin",
+  "version": "1.0.0",
+  "description": "Simple webpack plugin that generates VERSION and commitInfo insert index.html during build",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hanyueqiang/html-commit-version-plugin.git"
+  },
+  "engines": {
+    "node": ">=10.0.0"
+  },
+  "keywords": [
+    "git",
+    "html-version",
+    "plugin",
+    "version",
+    "webpack"
+  ],
+  "author": "hanyueqiang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hanyueqiang/html-commit-version-plugin/issues"
+  },
+  "homepage": "https://github.com/hanyueqiang/html-commit-version-plugin"
+}
