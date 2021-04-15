@@ -1,6 +1,6 @@
 {
   "name": "html-commit-version-plugin",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Simple webpack plugin that generates VERSION and commitInfo insert index.html during build",
   "main": "index.js",
   "scripts": {
