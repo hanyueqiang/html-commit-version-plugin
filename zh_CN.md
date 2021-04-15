@@ -1,17 +1,18 @@
 # Html commit version plugin
 
-Simple [webpack](https://webpack.js.org/) plugin that generates `CommitInfo` and `VERSION` insert index.html during build.
+一个简单的plugin插件，支持在打包后生成`commitI`信息和版本`Tag`，作为注释插入到`index.html`头部
 
-English | [简体中文](./zh_CN.md)
-## Usage
+简体中文 | [English](./README.md)
 
-Given a **webpack 4** project, install it as a local development dependency:
+## 使用
+
+在`webpack4+`项目中，作为开发依赖安装
 
 ```bash
 npm install html-commit-version-plugin --save-dev
 ```
 
-Then, simply configure it as a plugin in the webpack config:
+然后，在`webpack`配置中将其配置在`plugins`内：
 
 ```javascript
 var HtmlGitVersionPlugin = require("html-commit-version-plugin");
@@ -23,7 +24,7 @@ module.exports = {
 };
 ```
 
-It outputs a `VERSION` and `commitInfo` such as:
+打包后输出 `VERSION` and `commitInfo` 例如:
 
 ```html
 <!--
@@ -49,13 +50,11 @@ It outputs a `VERSION` and `commitInfo` such as:
   </body>
 </html>
 ```
-## Configuration
+## 配置
 
-The plugin requires no configuration by default, but it is possible to configure it to support custom commitInfo.
+该插件默认情况下不需要配置，但是可以通过配置支持自定义`commitInfo`内容
 
 ## Plugin API
-
-The `COMMITINFO`, `VERSION` are also exposed through a public API.
 
 ```javascript
 const webpack = require("webpack");
@@ -64,11 +63,11 @@ const HtmlVersionPlugin = require("html-commit-version-plugin");
 module.exports = {
   plugins: [
     new HtmlVersionPlugin({
-      commitId: true, // show commitId
-      version: true, // show commit tag，if no tag, show branch
-      commitName: true, // show commitName
-      buildDate: true, // show buildDate
-      email: false, // show email, default false
+      commitId: true, // 显示commitId，默认显示
+      version: true, // 显示tag版本，如果没有打版本tag，则显示当前分支名，默认显示
+      commitName: true, // 显示最后提交人名称，默认显示
+      buildDate: true, // 显示打包时间，默认显示
+      email: false, // 显示最后提交人邮箱，默认不显示
     }),
   ],
 };
